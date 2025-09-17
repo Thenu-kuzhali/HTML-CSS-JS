@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body { font-family: Arial; background: #f4f4f4; margin: 0; }
+    nav { background: #333; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    form { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; margin-top: 20px; }
+    h1 {margin-right:50%;color:white;display: inline;}
+</style>
+</head>
+<body>
+<nav>
+    <h1>Saivora</h1>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="product-details.html">Product Details</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<h1 style="text-align:center;">Checkout</h1>
+<form>
+    <label>Name</label>
+    <input type="text" required>
+    <label>Address</label>
+    <input type="text" required>
+    <label>Payment Method</label>
+    <select>
+        <option>Credit Card</option>
+        <option>Debit Card</option>
+        <option>UPI</option>
+        <option>Cash on Delivery</option>
+    </select>
+    <button type="submit">Place Order</button>
+</form>
+</body>
+</html>
