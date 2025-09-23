@@ -12,7 +12,12 @@
     nav a:hover { text-decoration: underline; }
     form { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; margin-top: 20px; }
     h1 {margin-right:50%;color:white;display: inline;}
+    
+
+
+
 </style>
+
 </head>
 <body>
 <nav>
@@ -24,8 +29,34 @@
     <a href="checkout.html">Checkout</a>
     <a href="contact.html">Contact Us</a>
 </nav>
+<div id="product-details" class="product"></div>
 
-<h1 style="text-align:center;">Product Details</h1>
-<p style="text-align:center;">Details about a selected product will show here.</p>
+  <script>
+    // ?id=... nu URL la eduthuko
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    // Products database
+    const products = {
+      1: { name: "Watch 1", desc: "Beautiful stylish watch", img: "image/1.webp" },
+      2: { name: "Watch 2", desc: "Premium quality watch", img: "image/2.jpg" },
+      3: { name: "Watch 3", desc: "Trendy modern watch", img: "image/3.webp" },
+      // continue upto 20 products
+    };
+
+    // Product details show
+    const product = products[id];
+    if (product) {
+      document.getElementById("product-details").innerHTML = `
+        <h2>${product.name}</h2>
+        <img src="${product.img}" alt="${product.name}">
+        <p>${product.desc}</p>
+        <button>Add to Cart</button>
+      `;
+    } else {
+      document.getElementById("product-details").innerHTML = "<p>Product not found!</p>";
+    }
+  </script>
+
 </body>
 </html>
