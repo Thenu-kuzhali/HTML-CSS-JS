@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Product Details</title>
+<title>SaiNish</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
@@ -12,6 +12,65 @@
     nav a:hover { text-decoration: underline; }
     form { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; margin-top: 20px; }
     h1 {margin-right:50%;color:white;display: inline;}
+    .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.product-image {
+    flex: 1;
+    min-width: 30px;
+}
+
+.product-image img {
+    width: 50%;
+    height: 100;
+    display: block;
+}
+
+.product-details {
+    flex: 2;
+    padding: 30px;
+}
+
+.product-title {
+    font-size: 2.5em;
+    margin-top: 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.8em;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+.add-to-cart-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #218838;
+}
     
 
 
@@ -30,33 +89,63 @@
     <a href="contact.html">Contact Us</a>
 </nav>
 <div id="product-details" class="product"></div>
+<div class="product-container">
+        <div class="product-image">
+            <img src="image/5.webp" alt="Product Name">
+            <img src="image/nt.webp" alt="Product Name">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Awesome Product</h1>
+            <p class="product-price">$600</p>
+            <p class="product-description">This is a great product with amazing features. It's durable, stylish, and perfect for all your needs.</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-image">
+            
+            <img src="image/u.webp" alt="Product Name">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Awesome Product</h1>
+            <p class="product-price">$600</p>
+            <p class="product-description">This is a great product with amazing features. It's durable, stylish, and perfect for all your needs.</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-image">
+            
+            <img src="image/n.webp" alt="Product Name">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Awesome Product</h1>
+            <p class="product-price">$600</p>
+            <p class="product-description">This is a great product with amazing features. It's durable, stylish, and perfect for all your needs.</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div><div id="product-details" class="product"></div>
+<div class="product-container">
+        <div class="product-image">
+            <img src="image/r.webp" alt="Product Name">
+            
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Awesome Product</h1>
+            <p class="product-price">$600</p>
+            <p class="product-description">This is a great product with amazing features. It's durable, stylish, and perfect for all your needs.</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const addToCartBtn = document.querySelector('.add-to-cart-btn');
 
-  <script>
-    // ?id=... nu URL la eduthuko
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
+    addToCartBtn.addEventListener('click', function() {
+        alert('Product has been added to your cart!');
+    });
+});
+    </script>
 
-    // Products database
-    const products = {
-      1: { name: "Watch 1", desc: "Beautiful stylish watch", img: "image/1.webp" },
-      2: { name: "Watch 2", desc: "Premium quality watch", img: "image/2.jpg" },
-      3: { name: "Watch 3", desc: "Trendy modern watch", img: "image/3.webp" },
-      // continue upto 20 products
-    };
 
-    // Product details show
-    const product = products[id];
-    if (product) {
-      document.getElementById("product-details").innerHTML = `
-        <h2>${product.name}</h2>
-        <img src="${product.img}" alt="${product.name}">
-        <p>${product.desc}</p>
-        <button>Add to Cart</button>
-      `;
-    } else {
-      document.getElementById("product-details").innerHTML = "<p>Product not found!</p>";
-    }
-  </script>
+  
+    
 
 </body>
 </html>

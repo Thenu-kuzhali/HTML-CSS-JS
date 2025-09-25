@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Checkout</title>
+<title>SaiNish</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
@@ -41,3 +41,83 @@
 </form>
 </body>
 </html>
+<!-----productde-->
+<div id="product-details"></div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  let product={
+    1:{name:"watch 1",desc:"this is product 1 details",img:"image/1.webp"},
+    2:{name:"watch 2",desc:"this is product 2 details",img:"image/2.jpg"},
+  3:{name:"watch 3",desc:"this is product 3 details",img:"image/4.jpg"},
+  4:{name:"watch 4",desc:"this is product 4 details",img:"image/5.webp"},
+  5:{name:"watch 5",desc:"this is product 5 details",img:"image/6.jpg"}
+};
+let product=product[id];
+if(product){
+document.getElementById("product-details").innerHTML = `
+        <h2>${product.name}</h2>
+        <p>${product.desc}</p>
+        <img src="${product.img}" width="300">
+      `;
+    } else {
+      document.getElementById("product-details").innerHTML = "<p>Product not found!</p>";
+    }
+    <!----details-->
+    <script>
+  
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    // Products list
+    const products = [
+      { id: 1, name: "Watch 1", desc: "This is product 1 details", img: "image/1.webp" },
+      { id: 2, name: "Watch 2", desc: "This is product 2 details", img: "image/2.webp" },
+      { id: 3, name: "Watch 3", desc: "This is product 3 details", img:"image/3.webp" },
+      { id: 4, name: "Watch 4", desc: "This is product 4 details", img: "image/4.webp" },
+      { id: 5, name: "Watch 5", desc: "This is product 5 details", img: "image/5.webp" },
+      { id: 6, name: "Watch 6", desc: "This is product 6 details", img:"image/6.webp" },
+      { id: 1, name: "Watch 7", desc: "This is product 1 details", img: "image/1.webp" },
+      { id: 2, name: "Watch 8", desc: "This is product 2 details", img: "image/2.webp" },
+      { id: 3, name: "Watch 9", desc: "This is product 3 details", img:"image/3.webp" },
+      { id: 4, name: "Watch 10", desc: "This is product 4 details", img: "image/4.webp" },
+      { id: 5, name: "Watch 11", desc: "This is product 5 details", img: "image/5.webp" },
+      { id: 6, name: "Watch 12", desc: "This is product 6 details", img:"image/6.webp" },
+    { id: 1, name: "Watch 13", desc: "This is product 1 details", img: "image/1.webp" },
+      { id: 2, name: "Watch 14", desc: "This is product 2 details", img: "image/2.webp" },
+      { id: 3, name: "Watch 15", desc: "This is product 3 details", img:"image/3.webp" },
+      { id: 4, name: "Watch 16", desc: "This is product 4 details", img: "image/4.webp" },
+      { id: 5, name: "Watch 17", desc: "This is product 5 details", img: "image/5.webp" },
+      { id: 6, name: "Watch 18", desc: "This is product 6 details", img:"image/6.webp" },
+    { id: 1, name: "Watch 19", desc: "This is product 1 details", img: "image/1.webp" },
+      { id: 2, name: "Watch 20", desc: "This is product 2 details", img: "image/2.webp" },
+      { id: 3, name: "Watch 21", desc: "This is product 3 details", img:"image/3.webp" },
+      { id: 4, name: "Watch 22", desc: "This is product 4 details", img: "image/4.webp" },
+      { id: 5, name: "Watch 23", desc: "This is product 5 details", img: "image/5.webp" },
+      { id: 6, name: "Watch 24", desc: "This is product 6 details", img:"image/6.webp" },
+    { id: 1, name: "Watch 25", desc: "This is product 1 details", img: "image/1.webp" },
+      { id: 2, name: "Watch 26", desc: "This is product 2 details", img: "image/2.webp" },
+      { id: 3, name: "Watch 27", desc: "This is product 3 details", img:"image/3.webp" },
+      { id: 4, name: "Watch 28", desc: "This is product 4 details", img: "image/4.webp" },
+      { id: 5, name: "Watch 29", desc: "This is product 5 details", img: "image/5.webp" },
+      { id: 6, name: "Watch 30", desc: "This is product 6 details", img:"image/6.webp" },
+    { id: 1, name: "Watch 31", desc: "This is product 1 details", img: "image/1.webp" },
+      { id: 2, name: "Watch 32", desc: "This is product 2 details", img: "image/2.webp" },
+      { id: 3, name: "Watch 33", desc: "This is product 3 details", img:"image/3.webp" },
+      { id: 4, name: "Watch 34", desc: "This is product 4 details", img: "image/4.webp" },
+      { id: 5, name: "Watch 35", desc: "This is product 5 details", img: "image/5.webp" }
+      
+    ];
+
+    // Match panna product
+    let product = products.find(p => p.id == id);
+    if (product) {
+      document.getElementById("product-details").innerHTML = `
+        <h2>${product.name}</h2>
+        <p>${product.desc}</p>
+        <img src="${product.img}" width="300">
+      `;
+    } else {
+      document.getElementById("product-details").innerHTML = "<p>Product not found</p>";
+    }
+  </script>
