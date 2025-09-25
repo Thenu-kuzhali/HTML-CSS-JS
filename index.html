@@ -12,7 +12,7 @@ body { font-family: Arial; background-image: url("image/sai.jpg");background-att
     nav a:hover { text-decoration: underline; }
     h1 {margin-right:50%;color:white;display: inline;}
     .searchbar{padding:50px;text-align: center;}
-    input{width:60%;padding: 15px;}
+    input{width:30%;padding: 15px;}
     #one{color:white;text-align: center;display:block;margin: auto;}
     
   </style>
@@ -28,12 +28,29 @@ body { font-family: Arial; background-image: url("image/sai.jpg");background-att
       <a href="contact.html">Contact Us</a>
   </nav>
   <div class="searchbar">
-    <input placeholder="search">
-  </div>
-   
+  <form onsubmit="return searchProduct()">
+    <input type="text" id="searchInput" placeholder="search">
+    
+  </form>
+</div>
+  
   <h1 id="one">"Timeless Style Starts Here" or your own"
     </h1>
-  
-  
+    
+
+<script>
+  function searchProduct() {
+    let query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    if (query === "watch") {
+      window.location.href = "products.html"; // products page ku redirect aagum
+      return false; // form submit stop pannum
+    } else {
+      alert("Product not found!");
+      return false;
+    }
+  }
+</script>
+    
   </body>
 </HTML>
